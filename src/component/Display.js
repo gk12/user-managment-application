@@ -8,7 +8,7 @@ import data from "./User"
 export default function Display() {
 
     const [currentPage,setCurrentPage]=useState(1)
-    const recordsPerPage=2;
+    const recordsPerPage=5;
     const lastIndex=currentPage * recordsPerPage;
     const firstIndex=lastIndex-recordsPerPage;
     const records=data.slice(firstIndex,lastIndex);
