@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button,Form } from 'react-bootstrap'
 import User from './User'
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Link,useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 import {v4 as uuid} from "uuid"
 export default function Add() {
     const [name,setName]=useState("")
@@ -45,7 +45,7 @@ export default function Add() {
     }
   return (
     <div>
-      <Form className='d-grid gap-2' style={{margin:"15rem"}}>
+      <Form className='d-grid gap-2' style={{margin:"15rem",display:'block',justifyContent:'center'}}>
         <Form.Group className='mb-3' controlId='formName'>
           <Form.Control type="text" placeholder='Enter Name' required onChange={(e)=>setName(e.target.value)}>
             </Form.Control>

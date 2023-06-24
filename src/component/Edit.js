@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button,Form } from 'react-bootstrap'
 import User from './User'
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Link,useNavigate } from 'react-router-dom' 
+import {useNavigate } from 'react-router-dom' 
 
 export default function Edit() {
   
@@ -55,7 +55,7 @@ export default function Edit() {
     
     return (
         <div>
-            <Form className='d-grid gap-2' style={{margin:"15rem"}}>
+            <Form className='d-grid gap-2' style={{margin:"15rem",display:'block',justifyContent:'center'}}>
         <Form.Group className='mb-3' controlId='formName'>
           <Form.Control 
           type="text" 

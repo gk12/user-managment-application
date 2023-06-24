@@ -36,7 +36,7 @@ export default function Display() {
     <div>
         <Fragment>
             <div style={{margin:"10rem"}}>
-                <Table striped bordered hover size="sm">
+                <Table  responsive="lg" striped bordered hover size="lg" stripped variant="dark">
                     <thead>
                         <tr>
                             <th>
@@ -53,7 +53,7 @@ export default function Display() {
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {
                             User && User.length >0 ?
                             records.map((item)=>{
@@ -70,29 +70,29 @@ export default function Display() {
                                         </td>
                                         <td>
                                             <Link to={'/edit'}>
-                                            <Button onClick={()=>handleEdit(item.id,item.Name,item.Email,item.PhoneNo)}>EDIT</Button>
+                                            <Button size="lg" onClick={()=>handleEdit(item.id,item.Name,item.Email,item.PhoneNo)}>EDIT</Button>
                                             </Link>
                                             &nbsp;
-                                            <Button onClick={()=>handleDelete(item.id)}>DELETE</Button>
+                                            <Button size="lg" onClick={()=>handleDelete(item.id)}>DELETE</Button>
 
                                         </td>
                                     </tr>
                                 )
                             })
                             :
-                            "No data Available to save"
+                            "No Data"
                      }
                     </tbody>
                 </Table>
                <br></br>
               <Link className='btn btn-primary' class to="/add">
-                <Button size="me">Add</Button>
+                <Button size="lg">Add</Button>
               </Link>
 
               <nav>
                 <ul className="pagination">
                   <li className="page-item">
-                    <button  className="page-link" onClick={prePage}>Prev
+                    <button className="page-link" onClick={prePage}>Prev
                     </button>
                   </li>   
                   {
